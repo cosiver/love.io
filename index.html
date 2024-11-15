@@ -3,46 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Flor y Corazón</title>
+  <title>Página de Flor y Corazón Mejorada</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #f3e5f5, #f8bbd0);
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
       color: #333;
       text-align: center;
       padding: 20px;
+      margin: 0;
     }
 
     h1 {
-      font-size: 2rem;
-      color: #880e4f;
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .icons {
-      font-size: 3rem;
-      margin: 10px;
+      font-size: 4rem;
+      margin: 15px;
     }
 
     .container {
-      background: #ffffffcc;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
       display: inline-block;
       width: 90%;
-      max-width: 500px;
+      max-width: 600px;
     }
 
     .upload-section, .message-section {
       margin: 20px 0;
     }
 
-    input[type="file"], textarea {
+    input[type="url"], textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ddd;
       border-radius: 8px;
       margin-top: 10px;
+      font-size: 1rem;
+      background-color: #fce4ec;
     }
 
     textarea {
@@ -52,40 +57,86 @@
 
     .btn {
       display: inline-block;
-      padding: 10px 20px;
-      background-color: #d81b60;
+      padding: 12px 25px;
+      background-color: #e91e63;
       color: #fff;
+      font-size: 1rem;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       transition: background 0.3s ease;
       margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(233, 30, 99, 0.3);
     }
 
     .btn:hover {
-      background-color: #ad1457;
+      background-color: #d81b60;
     }
+
+    .flower-decor {
+      font-size: 2.5rem;
+      margin: 10px 0;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    .preview {
+      margin: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
   </style>
 </head>
 <body>
 
-  <h1>Página con Flor y Corazón</h1>
+  <h1>🌸 Página Encantadora 🌸</h1>
   <div class="icons">
-    🌸 ❤️
+    🌸 🌺 ❤️ 💐 🌼
   </div>
 
   <div class="container">
     <div class="upload-section">
-      <h2>Sube tu Imagen</h2>
-      <input type="file" accept="image/*">
+      <h2>Ingresa URL de tu Imagen</h2>
+      <input type="url" id="image-url" placeholder="https://example.com/tu-imagen.jpg">
+      <button class="btn" onclick="showImage()">Cargar Imagen</button>
     </div>
+
+    <div class="preview" id="image-preview"></div>
 
     <div class="message-section">
       <h2>Escribe un Mensaje</h2>
       <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
-      <button class="btn">Enviar</button>
+      <button class="btn">Enviar Mensaje</button>
     </div>
   </div>
+
+  <div class="flower-decor">🌼 🌸 💐 🌺 🌻</div>
+
+  <footer>
+    Creado con amor para tu examen universitario 💖
+  </footer>
+
+  <script>
+    function showImage() {
+      const url = document.getElementById('image-url').value;
+      const preview = document.getElementById('image-preview');
+      if (url) {
+        preview.innerHTML = `<img src="${url}" alt="Imagen cargada">`;
+      } else {
+        preview.innerHTML = '<p>Por favor, ingresa una URL válida.</p>';
+      }
+    }
+  </script>
 
 </body>
 </html>
