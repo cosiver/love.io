@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Flor y Corazón</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #f3e5f5, #f8bbd0);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #880e4f;
+    }
+
+    .icons {
+      font-size: 3rem;
+      margin: 10px;
+    }
+
+    .container {
+      background: #ffffffcc;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .upload-section, .message-section {
+      margin: 20px 0;
+    }
+
+    input[type="file"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #d81b60;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Página con Flor y Corazón</h1>
+  <div class="icons">
+    🌸 ❤️
+  </div>
+
+  <div class="container">
+    <div class="upload-section">
+      <h2>Sube tu Imagen</h2>
+      <input type="file" accept="image/*">
+    </div>
+
+    <div class="message-section">
+      <h2>Escribe un Mensaje</h2>
+      <textarea placeholder="Escribe tu mensaje aquí..."></textarea>
+      <button class="btn">Enviar</button>
+    </div>
+  </div>
+
+</body>
+</html>
